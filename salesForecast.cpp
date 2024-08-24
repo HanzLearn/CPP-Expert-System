@@ -26,3 +26,48 @@ void salesForecast::setValidPromotion()
         }
     }
 }
+
+void salesForecast::setLunchTime()
+{
+    std::string tempLunchTime;
+    std::cout << "Enter Whether Lunch time is high/low: ";
+    std::cin >> tempLunchTime;
+    while(true)
+    {
+        if (tempLunchTime == "high" || tempLunchTime == "low")
+        {
+            lunchTime = tempLunchTime;
+            break;
+        }
+        else 
+        {
+            std::cout << "Invalid! Enter Again: " << std::endl;
+            std::cin >> tempLunchTime;
+        }
+    }
+}
+
+void salesForecast::setEndWeekOfMonth()
+{
+    std::string tempEndWeekOfMonth;
+    std::cout << "Enter If During The End Week Of The Month(Yes/No): ";
+    std::cin >> tempEndWeekOfMonth;
+
+    while (true)
+    {
+        if ( tempEndWeekOfMonth == "Yes" || tempEndWeekOfMonth == "yes" )
+        {
+            endWeekOfMonth = true;
+            break;
+        }
+        else if ( tempEndWeekOfMonth == "No" || tempEndWeekOfMonth == "no")
+        {
+            endWeekOfMonth = false;
+        }
+        else
+        {
+            std::cout << "Invalid! Enter Again(Yes/No): ";
+            std::cin >> tempEndWeekOfMonth;
+        }
+    }
+}
